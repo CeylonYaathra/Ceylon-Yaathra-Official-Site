@@ -1,3 +1,4 @@
+'use client'
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
@@ -6,6 +7,7 @@ import HomeIcon from '@mui/icons-material/Home';
 import GridViewIcon from '@mui/icons-material/GridView';
 import DomainIcon from '@mui/icons-material/Domain';
 import CallIcon from '@mui/icons-material/Call';
+import { motion } from 'framer-motion';
 import {
   Sheet,
   SheetContent,
@@ -36,15 +38,22 @@ export default function NavBar() {
             </SheetTitle>
             <SheetHeader>
               <SheetDescription className="mt-20 flex flex-col items-start ml-3">
-                {LINKS.map((link) => (
+                {LINKS.map((link,index) => (
+                  <motion.div
+                  key={link.route}
+                  initial={{ opacity: 0, x: -50 }}
+                  animate={{ opacity: 1, x: 0 }}  
+                  exit={{ opacity: 0, x: -50 }}    
+                  transition={{ duration: 0.75, delay: index * 0.1 }} 
+                >
                   <Link
                     href={link.route}
                     className="uppercase py-2 flex items-center gap-5 font-medium"
-                    key={link.route}
                   >
                     <link.Icon />
                     {link.name}
                   </Link>
+                </motion.div>
                 ))}
               </SheetDescription>
             </SheetHeader>

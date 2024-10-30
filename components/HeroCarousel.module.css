@@ -1,0 +1,24 @@
+
+.cover {
+    background-size: cover;
+    background-position: center;
+    animation: mymove 20s infinite;
+}
+
+@keyframes mymove {
+    0% {
+        background-image: url('/assets/carousel1.jpg');
+    }
+    30% {
+        background-image: url('/assets/carousel2.jpg'); 
+        animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    60% {
+        background-image: url('/assets/carousel3.jpg'); 
+        animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1); 
+    }
+    100% {
+        background-image: url('/assets/carousel1.jpg'); 
+        animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1); 
+    }
+}

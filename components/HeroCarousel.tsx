@@ -1,4 +1,13 @@
+'use client'
+import { useEffect, useState } from "react";
 import { cn } from "@/lib/utils";
+import styles from './HeroCarousel.module.css';
+
+const carouselImages = [
+  '/assets/carousel1.jpg',
+  '/assets/carousel2.jpg',
+  '/assets/carousel3.jpg',
+];
 
 interface HeroCarouselProps {
   children?: React.ReactNode;
@@ -7,6 +16,7 @@ interface HeroCarouselProps {
   subTitle: React.ReactNode;
   className?: string;
 }
+
 export default function HeroCarousel({
   children,
   titleMini,
@@ -16,11 +26,8 @@ export default function HeroCarousel({
 }: HeroCarouselProps) {
   return (
     <div
-      className="h-screen flex items-center"
+      className={`${styles.cover} h-screen flex items-center`}
       style={{
-        backgroundImage: "url('/assets/carousel1.png')",
-        backgroundSize: "cover",
-        backgroundPosition: "center",
         backgroundColor: "rgba(0, 0, 0, 0.8)",
         backgroundBlendMode: "overlay",
       }}
@@ -36,3 +43,4 @@ export default function HeroCarousel({
     </div>
   );
 }
+
