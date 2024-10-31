@@ -1,7 +1,5 @@
 import PrimaryNavLink from "@/components/PrimaryNavLink";
 import HeroCarousel from "../../components/HeroCarousel";
-import Container from "@/components/Container";
-import Image from "next/image";
 import MomentsSection from "./components/MomentsSection";
 import WhyBookSection from "./components/WhyBookSection";
 import MapSection from "./components/MapSection";

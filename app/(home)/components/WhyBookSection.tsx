@@ -3,6 +3,7 @@ import Container from "@/components/Container";
 import Image from "next/image";
 import React from "react";
 import WhyBookFacts from "./WhyBookFacts";
+import Bookwithus from "/public/assets/Bookwithus.jpg";
 import { motion } from "framer-motion";
 
 const variants = {
@@ -33,9 +34,10 @@ export default function WhyBookSection() {
     <Container className="py-10 px-5 md:gap-10" parentClassName="bg-cusBlue">
       <Image
         alt="moments"
-        src="/assets/Bookwithus.jpeg"
-        width={1000}
-        height={1000}
+        src={Bookwithus}
+        width={2000}
+        height={2000}
+        placeholder="blur"
         className="mb-5 object-cover h-[715px] max-md:h-[346px]  mx-auto"
         style={{ borderRadius: "0 10px 0 10px" }}
       />

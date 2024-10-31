@@ -43,7 +43,7 @@ export default function ReviewSection() {
   };
 
   return (
-    <Container className="my-20 md:mx-5 mx-3">
+    <Container className="my-20 md:px-5 px-3">
       <div className="flex flex-col justify-center max-md:items-center md:ml-12">
         <h1 className="text-5xl font-semibold my-1 max-md:text-[38px] max-md:text-center text-left">
           What Our Travelers Are Saying

@@ -2,6 +2,7 @@
 import Container from "@/components/Container";
 import Image from "next/image";
 import React from "react";
+import mapImage from "/public/assets/map.png";
 import { motion } from "framer-motion";
 
 const variants = {
@@ -48,9 +49,10 @@ export default function MapSection() {
       <div className="mb-5 relative h-[715px] max-md:h-[346px]">
         <Image
           alt="map"
-          src="/assets/map.png"
+          src={mapImage}
           layout="fill"
           objectFit="contain"
+          placeholder="blur"
         />
       </div>
     </Container>

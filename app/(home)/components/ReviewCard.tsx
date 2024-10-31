@@ -16,7 +16,7 @@ export default function ReviewCard({
 }) {
   return (
     <div
-      className="w-[448px] h-[180px] max-md:w-[381px] p-4 flex-shrink-0 transition-transform transform hover:scale-105 hover:shadow-xl cursor-pointer"
+      className="w-[448px] h-[180px] max-md:w-[381px] p-4 flex-shrink-0 transition-transform transform hover:scale-105 hover:shadow-xl text-left cursor-pointer"
       style={{
         boxShadow: "0 4px 20px rgba(0, 0, 0, 0.2)",
       }}

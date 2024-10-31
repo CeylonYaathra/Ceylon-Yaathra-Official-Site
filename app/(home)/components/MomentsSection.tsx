@@ -3,21 +3,23 @@ import Container from "@/components/Container";
 import Image from "next/image";
 import React, { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import moments1 from "/public/assets/moments1.jpg";
+import moments2 from "/public/assets/moments2.jpg";
 
 const variants = {
-    hidden: { opacity: 0, y: 20 }, 
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: {
-        duration: 0.6, 
-        ease: [0.5, 0, 0.5, 1], 
-        delay: 0.1, 
-      },
+  hidden: { opacity: 0, y: 20 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.6,
+      ease: [0.5, 0, 0.5, 1],
+      delay: 0.1,
     },
-  };
-  
-const Images = ["/assets/moments1.jpg", "/assets/moments2.jpg"];
+  },
+};
+
+const Images = [moments1, moments2];
 
 export default function MomentsSection() {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
@@ -31,14 +33,23 @@ export default function MomentsSection() {
   }, []);
 
   return (
-    <Container parentClassName="bg-white" className="px-5 overflow-hidden my-10">
+    <Container
+      parentClassName="bg-white"
+      className="px-5 overflow-hidden my-10"
+    >
       <motion.div
         initial="hidden"
         whileInView="visible"
         variants={variants}
-        viewport={{ once: false ,amount:0.5}} className="flex flex-col justify-center mr-3 max-md:order-last ">
-        <h5 className="text-sm font-semibold text-slate-500">Sri Lanka Journeys with Walkers Tours</h5>
-        <h1 className="text-5xl font-semibold my-1 max-md:text-[38px]">Walkers Tours</h1>
+        viewport={{ once: false, amount: 0.5 }}
+        className="flex flex-col justify-center mr-3 max-md:order-last "
+      >
+        <h5 className="text-sm font-semibold text-slate-500">
+          Sri Lanka Journeys with Walkers Tours
+        </h5>
+        <h1 className="text-5xl font-semibold my-1 max-md:text-[38px]">
+          Walkers Tours
+        </h1>
         <h4 className="text-base max-md:text-[15px]">
           Discover the beauty of Sri Lanka through real moments captured by our
           travelers! For over 54 years, Walkers Tours has crafted unforgettable
@@ -47,7 +58,7 @@ export default function MomentsSection() {
           make Sri Lanka unforgettable.
         </h4>
       </motion.div>
-      <div className="mb-5 relative  h-[715px] max-md:h-[346px]">
+      <div className="mb-5 relative h-[715px] max-md:h-[346px]">
         <AnimatePresence>
           <motion.div
             key={currentImageIndex}
@@ -62,6 +73,7 @@ export default function MomentsSection() {
               src={Images[currentImageIndex]}
               layout="fill"
               objectFit="cover"
+              placeholder="blur"
               style={{ borderRadius: "10px 0 10px 0" }}
             />
           </motion.div>
