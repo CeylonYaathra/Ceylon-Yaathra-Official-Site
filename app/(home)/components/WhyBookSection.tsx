@@ -44,13 +44,13 @@ export default function WhyBookSection() {
         initial="hidden"
         whileInView="visible"
         variants={variants}
-        viewport={{ once: false ,amount:0.5}} className="flex flex-col justify-center mr-3 max-md:order-last ">
+        viewport={{ once: false ,amount:0.5}} className="flex flex-col justify-center mr-3 max-md:order-last  ">
         <h1 className="text-5xl font-semibold my-1 max-md:text-[38px] text-white text-center">
           Why Book With Us?
         </h1>
         <div className="mt-5">
-          {facts.map((fact) => (
-            <WhyBookFacts text={fact} />
+          {facts.map((fact,index) => (
+            <WhyBookFacts text={fact} key={index}/>
           ))}
         </div>
         </motion.div>

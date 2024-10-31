@@ -36,7 +36,7 @@ export default function MomentsSection() {
         initial="hidden"
         whileInView="visible"
         variants={variants}
-        viewport={{ once: false ,amount:0.5}} className="flex flex-col justify-center mr-3 max-md:order-last">
+        viewport={{ once: false ,amount:0.5}} className="flex flex-col justify-center mr-3 max-md:order-last ">
         <h5 className="text-sm font-semibold text-slate-500">Sri Lanka Journeys with Walkers Tours</h5>
         <h1 className="text-5xl font-semibold my-1 max-md:text-[38px]">Walkers Tours</h1>
         <h4 className="text-base max-md:text-[15px]">

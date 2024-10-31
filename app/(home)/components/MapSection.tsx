@@ -30,7 +30,7 @@ export default function MapSection() {
         whileInView="visible"
         variants={variants}
         viewport={{ once: false ,amount:0.5}}
-        className="flex flex-col justify-center mr-3 max-sm:order-last"
+        className="flex flex-col justify-center mr-3 max-sm:order-last "
       >
         <h5 className="text-sm font-semibold text-slate-500">SRI LANKA </h5>
         <h1 className="text-5xl font-semibold my-1 max-md:text-[38px]">
