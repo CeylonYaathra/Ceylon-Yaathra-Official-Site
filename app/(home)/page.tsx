@@ -5,6 +5,9 @@ import Image from "next/image";
 import MomentsSection from "./components/MomentsSection";
 import WhyBookSection from "./components/WhyBookSection";
 import MapSection from "./components/MapSection";
+import PackageSection from "./components/PackageSection";
+import ReviewSection from "./components/ReviewSection";
+import InstagramWithUsSection from "./components/InstagramWithUsSection";
 
 export default function Home() {
   return (
@@ -28,6 +31,9 @@ export default function Home() {
       <MomentsSection/>
       <WhyBookSection/>
       <MapSection/>
+      <PackageSection/>
+      <ReviewSection/>
+      <InstagramWithUsSection/>
     </main>
   );
 }

@@ -4,6 +4,19 @@ import Image from "next/image";
 import React, { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
+const variants = {
+    hidden: { opacity: 0, y: 20 }, 
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.6, 
+        ease: [0.5, 0, 0.5, 1], 
+        delay: 0.1, 
+      },
+    },
+  };
+  
 const Images = ["/assets/moments1.jpg", "/assets/moments2.jpg"];
 
 export default function MomentsSection() {
@@ -19,7 +32,11 @@ export default function MomentsSection() {
 
   return (
     <Container parentClassName="bg-white" className="px-5 overflow-hidden my-10">
-      <div className="flex flex-col justify-center mr-3 max-md:order-last">
+      <motion.div
+        initial="hidden"
+        whileInView="visible"
+        variants={variants}
+        viewport={{ once: false ,amount:0.5}} className="flex flex-col justify-center mr-3 max-md:order-last">
         <h5 className="text-sm font-semibold text-slate-500">Sri Lanka Journeys with Walkers Tours</h5>
         <h1 className="text-5xl font-semibold my-1 max-md:text-[38px]">Walkers Tours</h1>
         <h4 className="text-base max-md:text-[15px]">
@@ -29,7 +46,7 @@ export default function MomentsSection() {
           iconic landmarks, vibrant culture, and breathtaking landscapes that
           make Sri Lanka unforgettable.
         </h4>
-      </div>
+      </motion.div>
       <div className="mb-5 relative  h-[715px] max-md:h-[346px]">
         <AnimatePresence>
           <motion.div
