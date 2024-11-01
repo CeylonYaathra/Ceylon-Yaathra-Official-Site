@@ -2,8 +2,8 @@
 import HeroCarousel from "@/components/HeroCarousel";
 import React from "react";
 import { motion } from "framer-motion";
-import PackageSection from "../components/PackageSection";
-import ReviewSection from "../components/ReviewSection";
+import PackageSection from "../_components/PackageSection";
+import ReviewSection from "../_components/ReviewSection";
 
 const variants = {
   hidden: { opacity: 0, y: 20 },

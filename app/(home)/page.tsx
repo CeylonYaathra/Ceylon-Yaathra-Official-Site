@@ -1,11 +1,11 @@
 import PrimaryNavLink from "@/components/PrimaryNavLink";
 import HeroCarousel from "../../components/HeroCarousel";
-import MomentsSection from "./components/MomentsSection";
-import WhyBookSection from "./components/WhyBookSection";
-import MapSection from "./components/MapSection";
-import PackageSection from "./components/PackageSection";
-import ReviewSection from "./components/ReviewSection";
-import InstagramWithUsSection from "./components/InstagramWithUsSection";
+import MomentsSection from "./_components/MomentsSection";
+import WhyBookSection from "./_components/WhyBookSection";
+import MapSection from "./_components/MapSection";
+import PackageSection from "./_components/PackageSection";
+import ReviewSection from "./_components/ReviewSection";
+import InstagramWithUsSection from "./_components/InstagramWithUsSection";
 
 export default function Home() {
   return (
